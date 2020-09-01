@@ -1,0 +1,121 @@
+package pr1;
+class Dog
+{
+    String name;
+    int years;
+}
+class Ball
+{
+    int size;
+    String name;
+}
+class Book
+{
+    int AmountOfPages;
+    String PageName;
+}
+class Tester
+{
+    boolean DogTestInt(Dog dog)
+    {
+        if(dog.years != 0)
+        {
+            System.out.println(dog.years);
+            return true;
+        }
+        else
+        {
+          System.out.println("TEST FAILED");
+          return false;
+        }
+    }
+    boolean DogTestString(Dog dog)
+    {
+        if(!dog.name.isEmpty())
+        {
+            System.out.println(dog.name);
+            return true;
+        }
+        else
+        {
+          System.out.println("TEST FAILED");
+          return false;
+        }
+    }
+    boolean BallTestInt(Ball ball)
+    {
+         if(ball.size != 0)
+        {
+            System.out.println(ball.size);
+            return true;
+        }
+        else
+        {
+          System.out.println("TEST FAILED");
+          return false;
+        }
+    }
+    boolean BallTestString(Ball ball)
+    {
+        if(!ball.name.isEmpty())
+        {
+            System.out.println(ball.name);
+            return true;
+        }
+        else
+        {
+          System.out.println("TEST FAILED");
+          return false;
+        }
+    }
+    boolean BookTestInt(Book book)
+    {
+         if(book.AmountOfPages != 0)
+        {
+            System.out.println(book.AmountOfPages);
+            return true;
+        }
+        else
+        {
+          System.out.println("TEST FAILED");
+          return false;
+        }
+    }
+    boolean BookTestString(Book book)
+    {
+        if(!book.PageName.isEmpty())
+        {
+            System.out.println(book.PageName);
+            return true;
+        }
+        else
+        {
+          System.out.println("TEST FAILED");
+          return false;
+        }
+    }
+}
+
+public class Pr1 {
+    public static void main(String[] args) {
+     Tester test = new Tester();
+     Dog Woof = new Dog();
+     Woof.name = "Woof";
+     Woof.years = 9;
+     Ball Fly = new Ball();
+     Fly.name = "Fly";
+     Fly.size = 3;
+     Book ReadThis = new Book();
+     ReadThis.AmountOfPages = 100;
+     ReadThis.PageName = "Annoying";
+     Woof.name.toString();
+     Fly.name.toString();
+     ReadThis.PageName.toString();
+     test.DogTestInt(Woof);
+     test.DogTestString(Woof);
+     test.BallTestInt(Fly);
+     test.BallTestString(Fly);
+     test.BookTestInt(ReadThis);
+     test.BookTestString(ReadThis);
+    }
+}
